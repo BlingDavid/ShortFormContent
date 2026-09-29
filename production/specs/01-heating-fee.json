@@ -1,0 +1,87 @@
+{
+  "id": "01-heating-fee",
+  "title": "The Heating Fee",
+  "status": "awaiting-generation",
+  "notes": [
+    "PRIMARY production candidate. Concept: Crumb claims the warm couch spot the moment its owner stands up.",
+    "Reference frame: assets/crumb-heating-fee-opening.png (rust-orange couch, cushion dent, hand with glass at the edge). It was not reachable from the cloud workspace and must be added before generation.",
+    "Beat timings are PROVISIONAL. Reconcile with production/heating-fee-production.md once that brief is attached; only the numbers in this file need to change.",
+    "Voice lines: Crumb speaks over voiceover, so dragon lip-sync is not required. Human is always off camera."
+  ],
+  "format": {"width": 1080, "height": 1920, "fps": "auto"},
+  "caption": "He charges rent on my own couch.",
+  "subtitle_y": 1290,
+  "characters": {
+    "crumb": {"color": "#FFE9C2", "outline": "#7A3B16"},
+    "human": {"color": "#FFFFFF", "outline": "#2B1A10"}
+  },
+  "gen_base": "Vertical 9:16 tactile 3D animated comedy in the exact rust-orange couch setting of the reference image. Preserve the same palm-sized cream dragon, moss-green wings, two short burnt-orange horns, dark eyes, warm late-afternoon light, and cushion dent. Natural tiny movements; no morphing, extra limbs, changing furniture, text, or subtitles.",
+  "clips": [
+    {
+      "id": "c1", "file": "raw/01-heating-fee/c1.mp4", "in": 0.3, "out": 3.7,
+      "gen": {
+        "seconds": 4, "first_frame": "assets/crumb-heating-fee-opening.png",
+        "action": "Crumb lies curled in the cushion dent. He notices the returning human: his head lifts slightly and his dark eyes swivel up toward a hand holding a drinking glass that enters at the far edge of frame, and his expression settles into calm, possessive confidence. He does not get up."
+      }
+    },
+    {
+      "id": "c2", "file": "raw/01-heating-fee/c2.mp4", "in": 0.2, "out": 2.4,
+      "gen": {
+        "seconds": 4, "first_frame": "assets/crumb-heating-fee-opening.png",
+        "action": "A human hand (no face) enters from the upper right edge of frame and points down at the cushion dent. Crumb tips his chin up and looks at the pointing finger, unbothered, then blinks slowly once."
+      }
+    },
+    {
+      "id": "c3", "file": "raw/01-heating-fee/c3.mp4", "in": 0.2, "out": 2.0,
+      "gen": {
+        "seconds": 4, "first_frame": "assets/crumb-heating-fee-opening.png",
+        "action": "Close view of Crumb. He slowly raises one small claw to shoulder height, like a tiny official making a formal announcement, holds it steady while looking straight ahead, and blinks once."
+      }
+    },
+    {
+      "id": "c4", "file": "raw/01-heating-fee/c4.mp4", "in": 0.2, "out": 6.2,
+      "gen": {
+        "seconds": 8, "first_frame": "assets/crumb-heating-fee-opening.png",
+        "action": "The lower half of a human face (chin and lips only, no eyes) lowers from the top edge of frame and gives Crumb one soft kiss on the forehead between his horns, then lifts away out of frame. Crumb's eyes close briefly, then open. He scoots sideways about one inch on the cushion, pats the small empty space he made with one claw, looks up, and then holds still, breathing gently.",
+        "fallback": "If the scoot is not clean, regenerate it as its own clip from the last frame of the kiss take and cut the two together."
+      }
+    }
+  ],
+  "audio": {
+    "vo": [
+      {"id": "v1", "who": "human", "text": "That's my seat.", "file": "audio/vo/01-heating-fee/v1.wav", "start": "c1.start+0.55", "est": 1.0,
+       "direction": "Mock-offended, warm, half a laugh. Not angry."},
+      {"id": "v2", "who": "crumb", "text": "I kept it warm.", "file": "audio/vo/01-heating-fee/v2.wav", "start": "v1.end+0.3", "est": 1.3,
+       "direction": "Solemn, matter-of-fact, slightly proud. A tiny voice that means every word."},
+      {"id": "v3", "who": "human", "text": "I was gone ten seconds.", "file": "audio/vo/01-heating-fee/v3.wav", "start": "c2.start+0.15", "est": 1.6,
+       "direction": "Incredulous but amused."},
+      {"id": "v4", "who": "crumb", "text": "Heating fee.", "file": "audio/vo/01-heating-fee/v4.wav", "start": "c3.start+0.3", "est": 1.0, "subtitle": false,
+       "direction": "Quiet, official, unarguable. Leave a beat of silence before it. The overlay carries the text."},
+      {"id": "v5", "who": "crumb", "text": "There.", "file": "audio/vo/01-heating-fee/v5.wav", "start": "c4.start+3.2", "est": 0.6,
+       "direction": "Gentle and satisfied; the softest line in the video."}
+    ],
+    "sfx": [
+      {"file": "glass_set_down", "start": "c1.start+0.30", "gain_db": -4},
+      {"file": "register_ding", "start": "v4.end-0.25", "gain_db": -3},
+      {"file": "kiss_soft", "start": "c4.start+0.75", "gain_db": -2},
+      {"file": "cushion_squeak", "start": "c4.start+1.85", "gain_db": -4},
+      {"file": "cushion_squeak", "start": "c4.start+2.5", "gain_db": -10}
+    ],
+    "music": [],
+    "room_tone": {"gain_db": 3, "fade_in": 0.3}
+  },
+  "overlays": [
+    {"id": "hook", "kind": "text", "style": "hook", "text": "I was gone for 10 seconds.", "start": 0.0, "end": "c1.end+0.1"},
+    {"id": "fee", "kind": "tag", "lines": ["HEATING FEE", "1 KISS"], "start": "v4.start+0.15", "end": "c4.start+1.6", "pos": [540, 540]}
+  ],
+  "cover": {
+    "image": "assets/crumb-heating-fee-opening.png", "clip": "c1", "at": 0.3,
+    "text": "I WAS GONE 10 SECONDS", "y": 470, "avoid": [300, 760, 800, 1300]
+  },
+  "qa": [
+    "OPENING (0.0s): Crumb already curled in a human-sized cushion dent, hand with glass entering at the edge; the hook overlay is readable and clear of his face. It reads as 'he took my seat' with no explanation.",
+    "PAYOFF: 'Heating fee' -> fee tag -> kiss -> the one-inch scoot and pat are clearly visible; 'There.' lands on a calm frame; the last ~1.8 s are quiet.",
+    "CONTINUITY: same cream dragon, two burnt-orange horns, moss-green wings, dark eyes; same rust-orange couch, cushion dent and light in all four clips; five fingers on the hand; kiss shows chin/lips only.",
+    "GENERATION ERRORS TO REJECT: extra limbs/horns, dragon changing size between cuts, glass or hand morphing, any lettering or logo in the footage, face detail on the human."
+  ]
+}

@@ -54,6 +54,8 @@ Outputs per video in `out/<id>/`: `<id>.mp4` (1080x1920, H.264/AAC, about -14 LU
 
 Verified by `tools/selftest.py` on **synthetic test-pattern footage** (watermarked, kept out of this folder, never a deliverable): 1080x1920 output, timing anchors, animated overlays, burned-in subtitles and SRT, slow-motion and hold, audio mixing and ducking, loudness (about -14 LUFS, true peak under -1 dBFS), cover generation with the 3:4 grid check, and colour fidelity (worst error 0.9 of 255 on an 8-colour Rec.709 chart).
 
+`python production/tools/selftest.py --specs` renders **all five real specs** end to end with watermarked stand-in clips and voice lines (in a temp directory, never in `out/`). All five pass: cue names, anchors, overlay positions and covers resolve, lengths come out at 12.2-13.4 s, no overlay leaves the platform-safe zone. It also confirmed the Video 2 fanfare stops on exactly the first ring. Run it after editing any spec, before spending anything on generation.
+
 Not verified: anything about real generated footage (character consistency, morphing, continuity), and how the synthesized sound effects and music actually sound. They were checked by level and spectrogram only, not auditioned. The effort grunts in particular are placeholders for a performed take.
 
 Design assumption to confirm: Pip's body colour is not in the brief; butter-yellow is assumed (see `characters.md`).

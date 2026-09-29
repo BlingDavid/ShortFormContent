@@ -128,6 +128,7 @@ def write_srt(tl: Timeline, path: Path) -> None:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("spec")
+    ap.add_argument("--root", help="directory that spec paths (raw/, audio/, assets/) resolve against (default production/)")
     ap.add_argument("--out", help="output directory (default production/out/<id>)")
     ap.add_argument("--dry-run", action="store_true", help="print the resolved timeline and missing assets, render nothing")
     ap.add_argument("--no-subtitles", action="store_true", help="skip burned-in dialogue captions")
@@ -139,7 +140,8 @@ def main(argv=None) -> int:
     a = ap.parse_args(argv)
 
     spec = load_spec(a.spec)
-    tl = Timeline(spec, ROOT, allow_missing=a.allow_missing)
+    root = Path(a.root) if a.root else ROOT
+    tl = Timeline(spec, root, allow_missing=a.allow_missing)
     overlays = build_overlays(tl, not a.no_subtitles, a.watermark)
     print_plan(tl, overlays)
     if a.dry_run:
@@ -149,7 +151,7 @@ def main(argv=None) -> int:
         print("\nCannot render yet: the assets above are missing. (Use --allow-missing to render anyway.)", file=sys.stderr)
         return 2
 
-    out = Path(a.out) if a.out else ROOT / "out" / spec["id"]
+    out = Path(a.out) if a.out else root / "out" / spec["id"]
     out.mkdir(parents=True, exist_ok=True)
     pic, wav, final = out / "_picture.mp4", out / "_master.wav", out / f"{spec['id']}.mp4"
     t0 = time.time()

@@ -111,14 +111,59 @@ def expect(cond: bool, msg: str, fails: list) -> None:
         fails.append(msg)
 
 
+def spec_smoke(d: Path) -> int:
+    """Render every REAL spec end to end with watermarked stand-in clips and voices.
+
+    Catches typos in cue names, anchors, overlay positions and cover settings before any
+    money is spent on generation. Stand-ins live in a temp root, never in production/.
+    """
+    import finish
+
+    fails: list[str] = []
+    for path in sorted((ROOT / "specs").glob("*.json")):
+        spec = json.loads(path.read_text())
+        root = d / spec["id"] / "root"
+        (root / "audio").mkdir(parents=True, exist_ok=True)
+        for sub in ("sfx", "music"):
+            link = root / "audio" / sub
+            if not link.exists():
+                link.symlink_to(ROOT / "audio" / sub)
+        for c in spec["clips"]:
+            p = root / c["file"]
+            p.parent.mkdir(parents=True, exist_ok=True)
+            sh("-f", "lavfi", "-i", f"testsrc2=size=720x1280:rate=24:duration={c['gen']['seconds']}", "-pix_fmt", "yuv420p",
+               "-c:v", "libx264", "-preset", "ultrafast", "-colorspace", "bt709", p)
+        for v in spec["audio"].get("vo", []):
+            p = root / v["file"]
+            p.parent.mkdir(parents=True, exist_ok=True)
+            make_voice(p, max(1, round(v["est"] / 0.19)), sum(map(ord, v["id"])))
+        out = d / spec["id"] / "out"
+        print(f"\n##### {spec['id']}")
+        rc = finish.main([str(path), "--root", str(root), "--out", str(out), "--watermark", "SPEC TEST - NOT FOOTAGE",
+                          "--preset", "ultrafast"])
+        rep = json.loads((out / "report.json").read_text()) if (out / "report.json").exists() else {}
+        flags = rep.get("qc", {}).get("flags", []) + rep.get("problems", [])
+        ok = rc == 0 and (out / f"{spec['id']}.mp4").exists()
+        expect(ok, f"{spec['id']} renders end to end", fails)
+        expect(not [f for f in flags if "safe zone" in f or "duration" in f or "size" in f or "black" in f],
+               f"{spec['id']} has no safe-zone / duration / size / black-frame flags", fails)
+        cov = rep.get("cover") or {}
+        expect(not cov.get("warnings") and "skipped" not in cov, f"{spec['id']} cover builds cleanly {cov.get('warnings', '')}", fails)
+    print("\nSPEC SMOKE:", "PASS" if not fails else f"FAIL ({len(fails)})")
+    return 1 if fails else 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--workdir")
     ap.add_argument("--keep", action="store_true")
+    ap.add_argument("--specs", action="store_true", help="instead, render every real spec with stand-in footage")
     a = ap.parse_args()
     d = Path(a.workdir or tempfile.mkdtemp(prefix="sfc_selftest_"))
     d.mkdir(parents=True, exist_ok=True)
     print("workdir:", d)
+    if a.specs:
+        return spec_smoke(d)
     make_footage(d)
     spec = test_spec(d)
     (d / "spec.json").write_text(json.dumps(spec, indent=2))

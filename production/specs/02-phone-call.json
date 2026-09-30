@@ -87,7 +87,7 @@
         "who": "crumb",
         "text": "It attacked first.",
         "file": "audio/vo/02-phone-call/v2.wav",
-        "start": "v1.end+0.2",
+        "start": "v1.end+0.12",
         "est": 1.0,
         "direction": "Grim, heroic, deadpan. A veteran reciting a battle report."
       },

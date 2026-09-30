@@ -2,7 +2,7 @@
 
 ## Status: five videos rendered in 3D (stand-in voices)
 
-All five shorts are rendered as real 3D animation: modelled characters and sets, lit and path-traced with Blender Cycles (`anim3d/`), 720x1280 upscaled to 1080x1920 in the edit. Crumb is modelled after the supplied reference image (`assets/crumb-heating-fee-opening.png`): cream scaly skin, ridged rust horns, olive bat wings, glossy amber eyes, rust couch in late-afternoon light. Pip was designed from the text brief. Voices are robotic espeak-ng stand-ins. Nothing has been published.
+All five shorts are rendered as real 3D animation: modelled characters and sets, lit and path-traced with Blender Cycles (`anim3d/`), 720x1280 upscaled to 1080x1920 in the edit. Crumb is modelled after the supplied reference image (`assets/crumb-heating-fee-opening.png`): cream scaly skin, ridged rust horns, olive bat wings, glossy amber eyes, rust couch in late-afternoon light. Pip was designed from the text brief. Voices are synthesized stand-ins (espeak-ng Klatt voices at natural pitch: Crumb about 95 Hz, Pip about 110 Hz, the human about 160 Hz, with light compression and room tone). They sound less squeaky than before but are still clearly synthetic. Nothing has been published.
 
 The earlier 2D vector versions (`anim/`) are superseded.
 
@@ -23,7 +23,7 @@ python production/anim3d/render3d.py <id>               # 3D clips into raw/ (gi
 python production/tools/finish.py production/specs/<id>.json
 ```
 
-Known limits: the 3D models are procedural (built in code, not sculpted by an artist), so they are simpler than the reference image; the human appears only as hands and, for the kiss, a soft-profile chin and lips; the espeak voices are placeholders (drop recorded or TTS WAVs into `audio/vo/<id>/` and re-run `finish.py`); sound was checked by level and spectrogram, not by ear.
+Known limits: the 3D models are procedural (built in code, not sculpted by an artist), so they are simpler than the reference image; the human appears only as hands and, for the kiss, a soft-profile chin and lips; the espeak voices are placeholders. Drop recorded or neural-TTS WAVs into `audio/vo/<id>/`, then re-run `render3d.py` (mouth movement follows the voice files) and `finish.py`. This session's network policy blocks Hugging Face, where the open neural TTS models are hosted; sound was checked by level and spectrogram, not by ear.
 
 ## Upgrading to true AI-generated footage (optional)
 

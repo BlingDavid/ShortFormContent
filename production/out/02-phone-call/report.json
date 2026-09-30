@@ -1,6 +1,6 @@
 {
   "id": "02-phone-call",
-  "seconds_to_render": 12.1,
+  "seconds_to_render": 26.2,
   "master": {
     "pre_master_lufs": "-19.31",
     "applied_gain_db": 5.31

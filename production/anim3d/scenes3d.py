@@ -339,8 +339,8 @@ class SocialBattery(Base):
             for i, lg in enumerate(self.legl):
                 lg.location = ((-0.9 if i == 0 else 0.9), K(t, [(c0, 0), (c0 + .6, -0.3)]) * (1 if i == 0 else 0),
                                (heel if i == 0 else tap) * 0.35)
-            p.root.location = (1.9, -2.8, 0)
-            p.root.rotation_euler = (0, 0, math.radians(-120))
+            p.root.location = (0.9, -0.9, 0)
+            p.root.rotation_euler = (0, 0, math.radians(-60))
             p.pose(t=t, brow=.6, look=(-.2, -.4), armL=-40, armR=-40)
             self.focus_on(V(3.4, -0.8, 1.0), (1.2, -8.5, 1.4), (3.0, 0, 1.6), 0.25, lens=40)
         elif shot == "c4":

@@ -158,7 +158,11 @@
       "style": "hook",
       "text": "Pip's exception.",
       "start": "v4.start",
-      "end": "end"
+      "end": "end",
+      "pos": [
+        540,
+        290
+      ]
     }
   ],
   "cover": {

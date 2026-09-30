@@ -275,14 +275,20 @@ class OneMoreVideo(Base):
             c0 = A["c4.start"]
             flick = K(t, [(c0 + 1.5, 0), (c0 + 1.7, 1), (c0 + 2.3, 1), (c0 + 2.5, 0)])
             p.root.location = (0, 0.4, 0.02)
-            p.pose(t=t, lid=.15 * (1 - flick), brow=-.6 * flick, mouth=self.talk("pip", t), head=(0, 8),
-                   look=(-.9 * flick, .55 * (1 - flick)), armR=-5, armL=-10, blink=pulse(t, c0 + 2.9, .25))
+            p.pose(t=t, lid=.15 * (1 - flick), brow=-.8 * flick, mouth=self.talk("pip", t), head=(-6 * flick, 8 - 6 * flick),
+                   look=(-1.6 * flick, .6 * (1 - flick) - .15 * flick), armR=-5, armL=-10, blink=pulse(t, c0 + 2.9, .25))
+            if not hasattr(self, "drop"):
+                self.drop = L.uv_sphere("sweat", 0.035, scale=(1, 1, 1.4), mat=PR.mats()["glass"], segs=16, rings=10)
+            bpy.context.view_layer.update()
+            dy = K(t, [(c0 + 1.9, 0), (c0 + 2.7, 1)])
+            self.drop.hide_render = t < c0 + 1.8
+            self.drop.location = p.head.matrix_world @ Vector((0.5, -0.45, 0.35 - 0.25 * dy))
             self.phone.location = (0, -0.35, 0.5)
             self.phone.rotation_euler = (math.radians(-80), 0, 0)
             PR.set_phone_glow(self.phone, 3.0)
             self.glow.data.energy = 60
             self.glow.location = (0, -0.28, 0.95)
-            self.focus_on(p.eyes[0], (0.15, -2.2, 1.35), (0, 0.3, 1.2), 0.12, lens=55)
+            self.focus_on(p.eyes[0], (0.15, -2.2, 1.35), (0, 0.3, 1.2), 0.3, lens=55)
 
 
 # ============================================================ 4. Social Battery Inspection

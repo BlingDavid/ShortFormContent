@@ -1,6 +1,6 @@
 {
   "id": "03-one-more-video",
-  "seconds_to_render": 17.9,
+  "seconds_to_render": 12.3,
   "master": {
     "pre_master_lufs": "-19.24",
     "applied_gain_db": 5.24
@@ -17,14 +17,14 @@
       "black_segments": [],
       "frozen_segments": [
         [
-          10.666667,
-          11.92
+          9.416667,
+          10.54
         ]
       ],
       "silent_segments": []
     },
     "flags": [
-      "frozen picture at [(10.666667, 11.92)] (fine only if it is an intended hold)"
+      "frozen picture at [(9.416667, 10.54)] (fine only if it is an intended hold)"
     ]
   },
   "cover": {

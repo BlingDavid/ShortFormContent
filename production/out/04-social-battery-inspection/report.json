@@ -1,6 +1,6 @@
 {
   "id": "04-social-battery-inspection",
-  "seconds_to_render": 20.7,
+  "seconds_to_render": 13.8,
   "master": {
     "pre_master_lufs": "-21.64",
     "applied_gain_db": 7.64

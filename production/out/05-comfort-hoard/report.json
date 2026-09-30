@@ -1,6 +1,6 @@
 {
   "id": "05-comfort-hoard",
-  "seconds_to_render": 10.9,
+  "seconds_to_render": 13.1,
   "master": {
     "pre_master_lufs": "-20.46",
     "applied_gain_db": 6.46
@@ -15,10 +15,25 @@
       "lra": 5.5,
       "true_peak_db": -1.4,
       "black_segments": [],
-      "frozen_segments": [],
+      "frozen_segments": [
+        [
+          5.875,
+          6.79
+        ],
+        [
+          8.208333,
+          9.42
+        ],
+        [
+          10.0,
+          11.25
+        ]
+      ],
       "silent_segments": []
     },
-    "flags": []
+    "flags": [
+      "frozen picture at [(5.875, 6.79), (8.208333, 9.42), (10.0, 11.25)] (fine only if it is an intended hold)"
+    ]
   },
   "cover": {
     "files": [

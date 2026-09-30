@@ -1,0 +1,40 @@
+{
+  "id": "04-social-battery-inspection",
+  "seconds_to_render": 13.8,
+  "master": {
+    "pre_master_lufs": "-21.64",
+    "applied_gain_db": 7.64
+  },
+  "qc": {
+    "facts": {
+      "duration_s": 13.4,
+      "size": "1080x1920",
+      "fps": 24.0,
+      "has_audio": true,
+      "lufs": -14.4,
+      "lra": 8.9,
+      "true_peak_db": -1.3,
+      "black_segments": [],
+      "frozen_segments": [
+        [
+          3.416667,
+          4.33
+        ]
+      ],
+      "silent_segments": []
+    },
+    "flags": [
+      "frozen picture at [(3.416667, 4.33)] (fine only if it is an intended hold)"
+    ]
+  },
+  "cover": {
+    "files": [
+      "cover.png",
+      "cover.jpg",
+      "cover_grid_check.png"
+    ],
+    "warnings": [],
+    "text_bbox": null
+  },
+  "problems": []
+}

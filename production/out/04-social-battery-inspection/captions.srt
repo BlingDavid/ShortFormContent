@@ -1,0 +1,16 @@
+1
+00:00:01,300 --> 00:00:03,260
+Pip, I have plans.
+
+2
+00:00:03,150 --> 00:00:04,790
+You were social yesterday.
+
+3
+00:00:05,200 --> 00:00:07,280
+I went to the grocery store.
+
+4
+00:00:07,600 --> 00:00:09,220
+And you made eye contact.
+

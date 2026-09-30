@@ -1,0 +1,102 @@
+{
+  "glass_set_down": {
+    "seconds": 0.7,
+    "peak_dbfs": -7.0,
+    "rms_dbfs": -28.0
+  },
+  "register_ding": {
+    "seconds": 0.9,
+    "peak_dbfs": -10.0,
+    "rms_dbfs": -26.0
+  },
+  "kiss_soft": {
+    "seconds": 0.35,
+    "peak_dbfs": -13.0,
+    "rms_dbfs": -32.0
+  },
+  "cushion_squeak": {
+    "seconds": 0.5,
+    "peak_dbfs": -12.0,
+    "rms_dbfs": -26.8
+  },
+  "phone_ring": {
+    "seconds": 0.75,
+    "peak_dbfs": -8.0,
+    "rms_dbfs": -16.0
+  },
+  "mug_clink": {
+    "seconds": 0.5,
+    "peak_dbfs": -14.0,
+    "rms_dbfs": -33.1
+  },
+  "phone_slide": {
+    "seconds": 0.5,
+    "peak_dbfs": -9.0,
+    "rms_dbfs": -26.7
+  },
+  "phone_set_tap": {
+    "seconds": 0.3,
+    "peak_dbfs": -6.0,
+    "rms_dbfs": -23.4
+  },
+  "scroll_swipes": {
+    "seconds": 2.3,
+    "peak_dbfs": -22.0,
+    "rms_dbfs": -44.6
+  },
+  "door_handle_rattle": {
+    "seconds": 1.1,
+    "peak_dbfs": -9.0,
+    "rms_dbfs": -27.7
+  },
+  "pencil_scratch": {
+    "seconds": 0.9,
+    "peak_dbfs": -14.0,
+    "rms_dbfs": -31.4
+  },
+  "stamp_thud": {
+    "seconds": 0.5,
+    "peak_dbfs": -3.0,
+    "rms_dbfs": -17.8
+  },
+  "blanket_drag": {
+    "seconds": 1.3,
+    "peak_dbfs": -14.0,
+    "rms_dbfs": -27.4
+  },
+  "slipper_drag": {
+    "seconds": 1.4,
+    "peak_dbfs": -14.0,
+    "rms_dbfs": -31.3
+  },
+  "cloth_plop": {
+    "seconds": 0.4,
+    "peak_dbfs": -10.0,
+    "rms_dbfs": -26.8
+  },
+  "heavy_breath": {
+    "seconds": 0.7,
+    "peak_dbfs": -22.0,
+    "rms_dbfs": -37.5
+  },
+  "room_tone": {
+    "seconds": 20.0,
+    "peak_dbfs": -40.0,
+    "rms_dbfs": -52.7
+  },
+  "effort_grunt_1": {
+    "seconds": 0.2,
+    "peak_dbfs": -9.0,
+    "rms_dbfs": -18.1
+  },
+  "effort_grunt_2": {
+    "seconds": 0.26,
+    "peak_dbfs": -9.0,
+    "rms_dbfs": -18.0
+  },
+  "effort_grunt_3": {
+    "seconds": 0.32,
+    "peak_dbfs": -9.0,
+    "rms_dbfs": -18.9
+  }
+}

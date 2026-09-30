@@ -1,0 +1,16 @@
+1
+00:00:00,400 --> 00:00:02,440
+You fought the vacuum cleaner.
+
+2
+00:00:02,640 --> 00:00:03,400
+It attacked first.
+
+3
+00:00:03,450 --> 00:00:05,160
+So call the dentist.
+
+4
+00:00:06,200 --> 00:00:07,780
+The vacuum never asked for my date of birth.
+

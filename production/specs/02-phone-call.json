@@ -1,0 +1,196 @@
+{
+  "id": "02-phone-call",
+  "title": "The Phone Call",
+  "status": "rendered-procedural",
+  "notes": [
+    "Concept: Crumb can face frightening household objects but cannot make an ordinary phone call.",
+    "Needs a new first frame: armored Crumb on a phone on a kitchen counter, generated from the Crumb reference (assets/crumb-heating-fee-opening.png) and approved before any video is generated.",
+    "The fanfare is a building cue that the edit cuts dead on the first ring; that hard stop is the joke's turn."
+  ],
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": "auto"
+  },
+  "caption": "A brave warrior with one very specific weakness.",
+  "subtitle_y": 1430,
+  "characters": {
+    "crumb": {
+      "color": "#FFE9C2",
+      "outline": "#7A3B16"
+    },
+    "human": {
+      "color": "#FFFFFF",
+      "outline": "#2B1A10"
+    }
+  },
+  "gen_base": "Vertical 9:16 tactile 3D animated comedy on a warm kitchen counter in soft natural light. Preserve the exact palm-sized cream dragon from the reference image: round face, dark expressive eyes, two short burnt-orange horns, tiny moss-green wings, small claws. He wears simple hand-made cardboard armor. A smartphone lies on the counter with a dark blank screen (no interface, no text). Natural tiny movements, clear readable action; no morphing, extra limbs, extra horns, changing props, text, subtitles, or logos.",
+  "clips": [
+    {
+      "id": "c1",
+      "file": "raw/02-phone-call/c1.mp4",
+      "in": 0.2,
+      "out": 3.6,
+      "gen": {
+        "seconds": 4,
+        "first_frame": "assets/v2-crumb-armor-opening.png",
+        "action": "Low-angle hero shot: the armored dragon stands with his chest out and one foot up on a smartphone lying on the counter, wings slightly spread, chin lifted, gazing into the distance like a statue. Very slow push-in. Warm light behind him."
+      }
+    },
+    {
+      "id": "c2",
+      "file": "raw/02-phone-call/c2.mp4",
+      "in": 0.2,
+      "out": 1.6,
+      "gen": {
+        "seconds": 4,
+        "first_frame": "assets/v2-crumb-armor-opening.png",
+        "action": "An off-camera human's hand enters from the right edge and gestures toward the smartphone with an open palm, as if saying 'go ahead'. The armored dragon glances from the hand to the phone, his heroic posture softening slightly."
+      }
+    },
+    {
+      "id": "c3",
+      "file": "raw/02-phone-call/c3.mp4",
+      "in": 0.2,
+      "out": 4.6,
+      "gen": {
+        "seconds": 6,
+        "first_frame": "assets/v2-crumb-armor-opening.png",
+        "action": "The smartphone screen lights up with a soft white glow and vibrates gently on the counter. The armored dragon freezes mid-pose, eyes widening, then his shoulders and wings slowly slump as his confidence collapses; his gaze stays locked on the phone."
+      }
+    },
+    {
+      "id": "c4",
+      "file": "raw/02-phone-call/c4.mp4",
+      "in": 0.2,
+      "out": 4.2,
+      "gen": {
+        "seconds": 6,
+        "first_frame": "assets/v2-mug-opening.png",
+        "action": "An overturned ceramic mug sits on the counter beside the phone. The mug trembles slightly; then two tiny burnt-orange horns and a pair of dark eyes peek out from the gap under the rim, and the mug settles back down. Nothing else moves."
+      }
+    }
+  ],
+  "audio": {
+    "vo": [
+      {
+        "id": "v1",
+        "who": "human",
+        "text": "You fought the vacuum cleaner.",
+        "file": "audio/vo/02-phone-call/v1.wav",
+        "start": "c1.start+0.4",
+        "est": 1.6,
+        "direction": "Proud-parent tone, a little amazed."
+      },
+      {
+        "id": "v2",
+        "who": "crumb",
+        "text": "It attacked first.",
+        "file": "audio/vo/02-phone-call/v2.wav",
+        "start": "v1.end+0.12",
+        "est": 1.0,
+        "direction": "Grim, heroic, deadpan. A veteran reciting a battle report."
+      },
+      {
+        "id": "v3",
+        "who": "human",
+        "text": "So call the dentist.",
+        "file": "audio/vo/02-phone-call/v3.wav",
+        "start": "c2.start+0.05",
+        "est": 1.1,
+        "direction": "Light, breezy, as if it were nothing."
+      },
+      {
+        "id": "v4",
+        "who": "crumb",
+        "text": "The vacuum never asked for my date of birth.",
+        "file": "audio/vo/02-phone-call/v4.wav",
+        "start": "c3.start+1.4",
+        "est": 3.0,
+        "direction": "Small and shaky; the voice of someone whose confidence just left the building. Steady pace, no rush.",
+        "sub_y": 1385
+      }
+    ],
+    "sfx": [
+      {
+        "file": "phone_ring",
+        "start": "c3.start+0.3",
+        "gain_db": -6
+      },
+      {
+        "file": "phone_ring",
+        "start": "c3.start+1.75",
+        "gain_db": -10
+      },
+      {
+        "file": "phone_ring",
+        "start": "c3.start+3.2",
+        "gain_db": -13
+      },
+      {
+        "file": "mug_clink",
+        "start": "c4.start+0.5",
+        "gain_db": -4
+      }
+    ],
+    "music": [
+      {
+        "file": "heroic_flourish",
+        "start": 0,
+        "stop_at": "c3.start+0.3",
+        "gain_db": -9,
+        "fade_in": 0.05,
+        "fade_out": 0.03,
+        "duck_db": -6
+      }
+    ],
+    "room_tone": {
+      "gain_db": 3,
+      "fade_in": 0.3
+    }
+  },
+  "overlays": [
+    {
+      "id": "hook",
+      "kind": "text",
+      "style": "hook",
+      "text": "He fought the vacuum.\nThen I asked him to call the dentist.",
+      "start": 0.0,
+      "end": "c2.start"
+    },
+    {
+      "id": "ok",
+      "kind": "checkitem",
+      "icon": "check",
+      "text": "Fought the vacuum",
+      "start": "c2.start",
+      "end": "end",
+      "pos": [
+        540,
+        300
+      ]
+    },
+    {
+      "id": "no",
+      "kind": "checkitem",
+      "icon": "cross",
+      "text": "Call the dentist",
+      "start": "c3.start+0.3",
+      "end": "end",
+      "pos": [
+        540,
+        440
+      ]
+    }
+  ],
+  "cover": {
+    "clip": "c1",
+    "at": 1.2
+  },
+  "qa": [
+    "OPENING (0.0s): armored Crumb standing on a phone, heroic low angle, fanfare already rising; the hook overlay explains the bit before the first line.",
+    "PAYOFF: fanfare stops dead on the first ring, his posture collapses, then the mug reveal; 'Call the dentist' cross lands with the ring; the last beat is the quiet mug clink.",
+    "CONTINUITY: same cream dragon and cardboard armor in every clip; phone size stays roughly twice his size; mug is the same mug; kitchen light is consistent.",
+    "GENERATION ERRORS TO REJECT: armor changing shape, phone screen showing readable UI/text, extra limbs, the dragon visible through the mug in the reveal beyond eyes and horns."
+  ]
+}

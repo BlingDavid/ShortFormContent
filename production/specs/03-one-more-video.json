@@ -1,0 +1,178 @@
+{
+  "id": "03-one-more-video",
+  "title": "One More Video",
+  "status": "rendered-procedural",
+  "notes": [
+    "Concept: Pip enforces bedtime, then gets caught breaking his own rule.",
+    "Pip has no reference image yet. Generate and approve a Pip character sheet first (production/characters.md has the prompt), then use it as the reference for videos 3 and 4.",
+    "The lullaby bed is cut before Pip's last line so the final joke lands in silence."
+  ],
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": "auto"
+  },
+  "caption": "The bedtime supervisor has been compromised.",
+  "subtitle_y": 1430,
+  "characters": {
+    "pip": {
+      "color": "#DCEBFF",
+      "outline": "#12305C"
+    },
+    "human": {
+      "color": "#FFFFFF",
+      "outline": "#2B1A10"
+    }
+  },
+  "gen_base": "Vertical 9:16 tactile 3D animated comedy in a dim bedroom lit by a warm bedside lamp. Preserve the exact small round duck from the reference image: cobalt-blue raincoat, bright red boots, orange bill, expressive eyes. An off-camera human is shown only as a hand on the duvet. The smartphone is large next to the duck and its screen shows only a blank glow (no readable interface, no text). One room, restrained movement; no morphing, extra limbs, changing outfit, text, subtitles, or logos.",
+  "clips": [
+    {
+      "id": "c1",
+      "file": "raw/03-one-more-video/c1.mp4",
+      "in": 0.2,
+      "out": 3.6,
+      "gen": {
+        "seconds": 4,
+        "first_frame": "assets/v3-bedside-opening.png",
+        "action": "Bedside close shot: a human hand loosely holds a smartphone on the duvet. Stern-faced Pip marches into frame, grips the phone's edge with both wings, and slides it out of the hand."
+      }
+    },
+    {
+      "id": "c2",
+      "file": "raw/03-one-more-video/c2.mp4",
+      "in": 0.2,
+      "out": 2.8,
+      "gen": {
+        "seconds": 4,
+        "first_frame": "assets/v3-bedside-opening.png",
+        "action": "Pip carries the phone to the far side of the nightstand and sets it down out of reach with a decisive tap, gives one satisfied nod, and folds his wings."
+      }
+    },
+    {
+      "id": "c3",
+      "file": "raw/03-one-more-video/c3.mp4",
+      "in": 0.2,
+      "out": 3.2,
+      "gen": {
+        "seconds": 4,
+        "first_frame": "assets/v3-glow-opening.png",
+        "action": "Later, the room is darker. Pip sits in a fold of the blanket lit only by the cool glow of a phone in front of him, scrolling with one wing, eyes flicking up and down, completely absorbed."
+      }
+    },
+    {
+      "id": "c4",
+      "file": "raw/03-one-more-video/c4.mp4",
+      "in": 0.2,
+      "out": 3.4,
+      "gen": {
+        "seconds": 4,
+        "first_frame": "assets/v3-glow-opening.png",
+        "action": "Close on Pip's face lit by the glow. Without looking up from the screen he freezes; his eyes flick sideways once toward the camera, then back to the screen. Guilty stillness, one tiny blink."
+      }
+    }
+  ],
+  "audio": {
+    "vo": [
+      {
+        "id": "v1",
+        "who": "human",
+        "text": "One more video.",
+        "file": "audio/vo/03-one-more-video/v1.wav",
+        "start": "c1.start+0.3",
+        "est": 1.2,
+        "direction": "Sleepy, pleading, half-whispered."
+      },
+      {
+        "id": "v2",
+        "who": "pip",
+        "text": "Denied.",
+        "file": "audio/vo/03-one-more-video/v2.wav",
+        "start": "v1.end+0.25",
+        "est": 0.7,
+        "direction": "Crisp, officious, zero room for appeal."
+      },
+      {
+        "id": "v3",
+        "who": "human",
+        "text": "Pip.",
+        "file": "audio/vo/03-one-more-video/v3.wav",
+        "start": "c3.start+1.9",
+        "est": 0.6,
+        "direction": "Flat and knowing. One syllable of 'I see you'."
+      },
+      {
+        "id": "v4",
+        "who": "pip",
+        "text": "One more video.",
+        "file": "audio/vo/03-one-more-video/v4.wav",
+        "start": "v3.end+0.5",
+        "est": 1.2,
+        "direction": "Distracted, eyes still on the screen, not even defending himself. The same words as the human's, in a completely different mood."
+      }
+    ],
+    "sfx": [
+      {
+        "file": "phone_slide",
+        "start": "c1.start+0.15",
+        "gain_db": -3
+      },
+      {
+        "file": "phone_set_tap",
+        "start": "c2.start+0.95",
+        "gain_db": -2
+      },
+      {
+        "file": "scroll_swipes",
+        "start": "c3.start+0.25",
+        "gain_db": -2
+      }
+    ],
+    "music": [
+      {
+        "file": "lullaby_bed",
+        "start": 0,
+        "stop_at": "v3.start-0.05",
+        "gain_db": -17,
+        "fade_in": 0.4,
+        "fade_out": 0.25,
+        "duck_db": -5
+      }
+    ],
+    "room_tone": {
+      "gain_db": 3,
+      "fade_in": 0.3
+    }
+  },
+  "overlays": [
+    {
+      "id": "rule",
+      "kind": "text",
+      "style": "hook",
+      "text": "Pip's bedtime rule.",
+      "start": 0.0,
+      "end": "c1.end"
+    },
+    {
+      "id": "exception",
+      "kind": "text",
+      "style": "hook",
+      "text": "Pip's exception.",
+      "start": "v4.start",
+      "end": "end",
+      "pos": [
+        540,
+        290
+      ]
+    }
+  ],
+  "cover": {
+    "clip": "c4",
+    "at": 1.6
+  },
+  "qa": [
+    "OPENING (0.0s): a stern duck in red boots sliding a phone out of a hand; 'Pip's bedtime rule.' makes the rule explicit.",
+    "PAYOFF: the hard cut to the glow on Pip's face reads instantly as 'he is watching it himself'; the music is gone before 'One more video.'; 'Pip's exception.' lands with the line; the last beat is his guilty stillness.",
+    "CONTINUITY: identical Pip (cobalt raincoat, red boots, bill colour, proportions) in all four clips; phone is the same size relative to him; the cut from lamp-lit bedside to blue glow feels like time has passed, not like a different duck.",
+    "GENERATION ERRORS TO REJECT: readable text on the phone screen, extra wings/legs, raincoat changing shade, the phone changing size."
+  ]
+}

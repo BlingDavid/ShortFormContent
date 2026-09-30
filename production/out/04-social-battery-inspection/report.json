@@ -1,0 +1,33 @@
+{
+  "id": "04-social-battery-inspection",
+  "seconds_to_render": 10.4,
+  "master": {
+    "pre_master_lufs": "-21.64",
+    "applied_gain_db": 7.64
+  },
+  "qc": {
+    "facts": {
+      "duration_s": 13.4,
+      "size": "1080x1920",
+      "fps": 24.0,
+      "has_audio": true,
+      "lufs": -14.4,
+      "lra": 8.9,
+      "true_peak_db": -1.3,
+      "black_segments": [],
+      "frozen_segments": [],
+      "silent_segments": []
+    },
+    "flags": []
+  },
+  "cover": {
+    "files": [
+      "cover.png",
+      "cover.jpg",
+      "cover_grid_check.png"
+    ],
+    "warnings": [],
+    "text_bbox": null
+  },
+  "problems": []
+}

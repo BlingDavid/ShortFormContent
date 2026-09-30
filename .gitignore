@@ -4,3 +4,4 @@ __pycache__/
 *.log
 production/out/*/_picture.mp4
 production/out/*/_master.wav
+production/raw/*/*.mp4

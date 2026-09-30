@@ -1,20 +1,24 @@
 # Production: five Crumb & Pip shorts
 
-## Status: no finished videos yet
+## Status: five videos rendered (code-animated, stand-in voices)
 
-The finishing kit, original audio, scripts and generation prompts for all five videos are built and tested. **The animated clips themselves do not exist**, because the cloud session that built this folder had no video generator it could call. Nothing here is a finished video, no stills have been passed off as animation, and nothing has been published.
+All five shorts exist as finished 1080x1920 files in `out/<id>/` with covers, captions and QC reports. **How they were made matters:** no AI video generator was reachable from the cloud session, so the characters are animated in code (`anim/`): drawn frame by frame, keyed to the same timeline as the voice, SFX and overlays. That is real animation, but it is a stylised vector look, **not** the tactile 3D style of your reference image (which was not available here). Voices are robotic espeak-ng stand-ins. Nothing has been published.
 
-| # | Video | Length (planned) | State |
+| # | Video | Length | File |
 |---|---|---|---|
-| 1 | The Heating Fee (primary) | 13.4 s | spec, prompts, cues ready; needs reference image + footage + voices |
-| 2 | The Phone Call | 13.2 s | spec ready; needs armored-Crumb opening frame + footage + voices |
-| 3 | One More Video | 12.2 s | spec ready; needs Pip character sheet + footage + voices |
-| 4 | Social Battery Inspection | 13.4 s | spec ready; needs Pip character sheet + footage + voices |
-| 5 | The Comfort Hoard | 13.0 s | spec ready; needs slipper/pile opening frames + footage + voices |
+| 1 | The Heating Fee | 13.4 s | `out/01-heating-fee/01-heating-fee.mp4` |
+| 2 | The Phone Call | 13.2 s | `out/02-phone-call/02-phone-call.mp4` |
+| 3 | One More Video | 12.2 s | `out/03-one-more-video/03-one-more-video.mp4` |
+| 4 | Social Battery Inspection | 13.4 s | `out/04-social-battery-inspection/04-social-battery-inspection.mp4` |
+| 5 | The Comfort Hoard | 13.0 s | `out/05-comfort-hoard/05-comfort-hoard.mp4` |
 
-Lengths are computed from estimated voice-line durations and clip windows; they become exact once real clips and voice lines exist.
+Rebuild any video: `python production/tools/make_voices.py <id>` (voices), `python production/anim/render.py <id>` (clips into `raw/`, git-ignored), `python production/tools/finish.py production/specs/<id>.json` (edit, mix, cover, QC).
 
-## What blocks the finished videos (and the exact fix)
+Known limits: Crumb and Pip are designed from the text brief, so their look is provisional; the espeak voices are placeholders (drop recorded or TTS WAVs into `audio/vo/<id>/` and re-run `finish.py`); sound effects and music were checked by level and spectrogram, not by ear; Video 5's last line has its caption switched off to honour "no overlay on the final line".
+
+## Upgrading to true AI-generated footage (optional)
+
+### What that needs (and the exact fix)
 
 1. **The two reference files.** `crumb-heating-fee-opening.png` and `heating-fee-production.md` are on the local Mac (`.../production/`), which the cloud workspace cannot see. The Google Drive connector is connected but returns an OAuth-scope error, so it cannot read files either.
    *Fix:* commit them to this repo as `production/assets/crumb-heating-fee-opening.png` and `production/heating-fee-production.md`, or attach them in chat. The Video 1 timings are provisional until that brief is read.

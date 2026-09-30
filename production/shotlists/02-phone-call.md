@@ -1,6 +1,6 @@
 # The Phone Call  (`02-phone-call`)
 
-- Status: **awaiting-generation**
+- Status: **rendered-procedural**
 - Planned length: **13.2 s** vertical 9:16 (provisional until real clip and voice lengths exist)
 - Final caption: *A brave warrior with one very specific weakness.*
 - Cover: bare frame from clip `c1`
@@ -49,10 +49,10 @@ Vertical 9:16 tactile 3D animated comedy on a warm kitchen counter in soft natur
 
 | id | time | who | line | direction |
 |---|---|---|---|---|
-| v1 | 0.40-2.00 | human | You fought the vacuum cleaner. | Proud-parent tone, a little amazed. |
-| v2 | 2.20-3.20 | crumb | It attacked first. | Grim, heroic, deadpan. A veteran reciting a battle report. |
-| v3 | 3.45-4.55 | human | So call the dentist. | Light, breezy, as if it were nothing. |
-| v4 | 6.20-9.20 | crumb | The vacuum never asked for my date of birth. | Small and shaky; the voice of someone whose confidence just left the building. Steady pace, no rush. |
+| v1 | 0.40-2.44 | human | You fought the vacuum cleaner. | Proud-parent tone, a little amazed. |
+| v2 | 2.64-3.40 | crumb | It attacked first. | Grim, heroic, deadpan. A veteran reciting a battle report. |
+| v3 | 3.45-5.16 | human | So call the dentist. | Light, breezy, as if it were nothing. |
+| v4 | 6.20-7.78 | crumb | The vacuum never asked for my date of birth. | Small and shaky; the voice of someone whose confidence just left the building. Steady pace, no rush. |
 
 ## Overlays
 

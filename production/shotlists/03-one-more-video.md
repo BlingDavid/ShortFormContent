@@ -1,6 +1,6 @@
 # One More Video  (`03-one-more-video`)
 
-- Status: **awaiting-generation**
+- Status: **rendered-procedural**
 - Planned length: **12.2 s** vertical 9:16 (provisional until real clip and voice lengths exist)
 - Final caption: *The bedtime supervisor has been compromised.*
 - Cover: bare frame from clip `c4`
@@ -49,17 +49,17 @@ Vertical 9:16 tactile 3D animated comedy in a dim bedroom lit by a warm bedside 
 
 | id | time | who | line | direction |
 |---|---|---|---|---|
-| v1 | 0.30-1.50 | human | One more video. | Sleepy, pleading, half-whispered. |
-| v2 | 1.75-2.45 | pip | Denied. | Crisp, officious, zero room for appeal. |
-| v3 | 7.90-8.50 | human | Pip. | Flat and knowing. One syllable of 'I see you'. |
-| v4 | 9.00-10.20 | pip | One more video. | Distracted, eyes still on the screen, not even defending himself. The same words as the human's, in a completely different mood. |
+| v1 | 0.30-1.77 | human | One more video. | Sleepy, pleading, half-whispered. |
+| v2 | 2.02-2.83 | pip | Denied. | Crisp, officious, zero room for appeal. |
+| v3 | 7.90-8.69 | human | Pip. | Flat and knowing. One syllable of 'I see you'. |
+| v4 | 9.19-10.44 | pip | One more video. | Distracted, eyes still on the screen, not even defending himself. The same words as the human's, in a completely different mood. |
 
 ## Overlays
 
 | time | overlay |
 |---|---|
 | 0.00-3.40 | text: Pip's bedtime rule. |
-| 9.00-12.20 | text: Pip's exception. |
+| 9.19-12.20 | text: Pip's exception. |
 
 Dialogue subtitles are burned in from the voice lines (turn off with `--no-subtitles`).
 

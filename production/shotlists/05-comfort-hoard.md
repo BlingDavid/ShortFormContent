@@ -1,6 +1,6 @@
 # The Comfort Hoard  (`05-comfort-hoard`)
 
-- Status: **awaiting-generation**
+- Status: **rendered-procedural**
 - Planned length: **13.0 s** vertical 9:16 (provisional until real clip and voice lengths exist)
 - Final caption: *He understood the assignment eventually.*
 - Cover: bare frame from clip `c1`
@@ -50,10 +50,10 @@ Vertical 9:16 tactile 3D animated comedy in an intimate living room at soft even
 
 | id | time | who | line | direction |
 |---|---|---|---|---|
-| v1 | 2.50-4.30 | human | Why are you stealing my stuff? | Amused disbelief; they have just walked in on it. |
-| v2 | 4.50-5.80 | crumb | You had a bad day. | Simple, sincere, slightly out of breath from hauling. No joke in the delivery. |
-| v3 | 6.90-7.40 | human | So? | Soft, a little raw; the joke is over and they know it. |
-| v4 | 7.90-9.50 | crumb | I only hoard treasure. | Solemn and gentle. This is the whole heart of the video; do not play it as a punchline. |
+| v1 | 2.50-4.37 | human | Why are you stealing my stuff? | Amused disbelief; they have just walked in on it. |
+| v2 | 4.50-5.29 | crumb | You had a bad day. | Simple, sincere, slightly out of breath from hauling. No joke in the delivery. |
+| v3 | 6.90-7.72 | human | So? | Soft, a little raw; the joke is over and they know it. |
+| v4 | 8.22-9.13 | crumb | I only hoard treasure. | Solemn and gentle. This is the whole heart of the video; do not play it as a punchline. |
 
 ## Overlays
 

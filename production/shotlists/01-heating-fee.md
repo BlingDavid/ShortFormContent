@@ -1,6 +1,6 @@
 # The Heating Fee  (`01-heating-fee`)
 
-- Status: **awaiting-generation**
+- Status: **rendered-procedural**
 - Planned length: **13.4 s** vertical 9:16 (provisional until real clip and voice lengths exist)
 - Final caption: *He charges rent on my own couch.*
 - Cover: text "I WAS GONE 10 SECONDS" over a frame from clip `c1`
@@ -52,11 +52,11 @@ Fallback: If the scoot is not clean, regenerate it as its own clip from the last
 
 | id | time | who | line | direction |
 |---|---|---|---|---|
-| v1 | 0.55-1.55 | human | That's my seat. | Mock-offended, warm, half a laugh. Not angry. |
-| v2 | 1.85-3.15 | crumb | I kept it warm. | Solemn, matter-of-fact, slightly proud. A tiny voice that means every word. |
-| v3 | 3.55-5.15 | human | I was gone ten seconds. | Incredulous but amused. |
-| v4 | 5.90-6.90 | crumb | Heating fee. | Quiet, official, unarguable. Leave a beat of silence before it. The overlay carries the text. |
-| v5 | 10.60-11.20 | crumb | There. | Gentle and satisfied; the softest line in the video. |
+| v1 | 0.55-1.79 | human | That's my seat. | Mock-offended, warm, half a laugh. Not angry. |
+| v2 | 2.09-2.93 | crumb | I kept it warm. | Solemn, matter-of-fact, slightly proud. A tiny voice that means every word. |
+| v3 | 3.55-5.46 | human | I was gone ten seconds. | Incredulous but amused. |
+| v4 | 5.90-6.50 | crumb | Heating fee. | Quiet, official, unarguable. Leave a beat of silence before it. The overlay carries the text. |
+| v5 | 10.60-11.04 | crumb | There. | Gentle and satisfied; the softest line in the video. |
 
 ## Overlays
 
@@ -72,7 +72,7 @@ Dialogue subtitles are burned in from the voice lines (turn off with `--no-subti
 | time | cue |
 |---|---|
 | 0.30 | SFX `glass_set_down` -4 dB |
-| 6.65 | SFX `register_ding` -3 dB |
+| 6.25 | SFX `register_ding` -3 dB |
 | 8.15 | SFX `kiss_soft` -2 dB |
 | 9.25 | SFX `cushion_squeak` -4 dB |
 | 9.90 | SFX `cushion_squeak` -10 dB |

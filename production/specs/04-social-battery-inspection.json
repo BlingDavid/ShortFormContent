@@ -1,83 +1,198 @@
 {
   "id": "04-social-battery-inspection",
   "title": "Social Battery Inspection",
-  "status": "awaiting-generation",
+  "status": "rendered-procedural",
   "notes": [
     "Concept: Pip refuses to let his human leave after an exhausting day.",
     "Shoot c1-c3 with a locked-off camera and identical framing so the CLOSED lettering (added in editing) sits on the blank sign in the same place. Adjust the sign overlay's pos/rot/scale after the footage exists.",
     "Human is only ever knees-down. No sign lettering is generated in the footage."
   ],
-  "format": {"width": 1080, "height": 1920, "fps": "auto"},
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": "auto"
+  },
   "caption": "Pip counts grocery-store eye contact as an outing.",
-  "subtitle_y": 1290,
+  "subtitle_y": 1430,
   "characters": {
-    "pip": {"color": "#DCEBFF", "outline": "#12305C"},
-    "human": {"color": "#FFFFFF", "outline": "#2B1A10"}
+    "pip": {
+      "color": "#DCEBFF",
+      "outline": "#12305C"
+    },
+    "human": {
+      "color": "#FFFFFF",
+      "outline": "#2B1A10"
+    }
   },
   "gen_base": "Vertical 9:16 tactile 3D animated comedy in a cozy apartment entryway, locked-off camera. Preserve the exact small round duck from the reference image: cobalt-blue raincoat, bright red boots, orange bill, expressive eyes, carrying a tiny wooden clipboard with a pencil. A front door behind him. The off-camera human is visible only from the knees down (sneakers, jeans). Any sign is plain blank white cardboard with no writing. Simple physical actions, warm playful tone; no morphing, extra limbs, changing outfit, text, subtitles, or logos.",
   "clips": [
     {
-      "id": "c1", "file": "raw/04-social-battery-inspection/c1.mp4", "in": 0.2, "out": 3.2,
+      "id": "c1",
+      "file": "raw/04-social-battery-inspection/c1.mp4",
+      "in": 0.2,
+      "out": 3.2,
       "gen": {
-        "seconds": 4, "first_frame": "assets/v4-entryway-opening.png",
+        "seconds": 4,
+        "first_frame": "assets/v4-entryway-opening.png",
         "action": "Wide locked-off shot. Pip stands planted in front of the door, red boots wide apart, holding a large blank white cardboard sign upright beside him, as tall as he is. The human's sneakers stand a few feet away, one foot tapping. A hand reaches in from the side, tries the door handle; it rattles once and the door stays shut."
       }
     },
     {
-      "id": "c2", "file": "raw/04-social-battery-inspection/c2.mp4", "in": 0.2, "out": 2.2,
+      "id": "c2",
+      "file": "raw/04-social-battery-inspection/c2.mp4",
+      "in": 0.2,
+      "out": 2.2,
       "gen": {
-        "seconds": 4, "first_frame": "assets/v4-entryway-opening.png",
+        "seconds": 4,
+        "first_frame": "assets/v4-entryway-opening.png",
         "action": "Same framing. Pip stays planted with the blank sign, chin up, looking sternly up at the human off-camera above him, then gives one small firm nod."
       }
     },
     {
-      "id": "c3", "file": "raw/04-social-battery-inspection/c3.mp4", "in": 0.2, "out": 2.4,
+      "id": "c3",
+      "file": "raw/04-social-battery-inspection/c3.mp4",
+      "in": 0.2,
+      "out": 2.4,
       "gen": {
-        "seconds": 4, "first_frame": "assets/v4-entryway-shoes-opening.png",
+        "seconds": 4,
+        "first_frame": "assets/v4-entryway-shoes-opening.png",
         "action": "Knees-down shot of the entryway floor: the human's sneakers shift, then pause, toes pointing at the door; one heel lifts slightly and settles, as if reluctantly considering the question. Pip's red boots are visible at the edge of frame."
       }
     },
     {
-      "id": "c4", "file": "raw/04-social-battery-inspection/c4.mp4", "in": 0.2, "out": 3.4,
+      "id": "c4",
+      "file": "raw/04-social-battery-inspection/c4.mp4",
+      "in": 0.2,
+      "out": 3.4,
       "gen": {
-        "seconds": 4, "first_frame": "assets/v4-clipboard-opening.png",
+        "seconds": 4,
+        "first_frame": "assets/v4-clipboard-opening.png",
         "action": "Close on Pip flipping a page on his tiny clipboard and scribbling with a pencil, then pressing a small rubber stamp firmly onto the page, and lifting it away. The page stays blank and unreadable."
       }
     },
     {
-      "id": "c5", "file": "raw/04-social-battery-inspection/c5.mp4", "in": 0.2, "out": 3.2,
+      "id": "c5",
+      "file": "raw/04-social-battery-inspection/c5.mp4",
+      "in": 0.2,
+      "out": 3.2,
       "gen": {
-        "seconds": 4, "first_frame": "assets/v4-blanket-opening.png",
+        "seconds": 4,
+        "first_frame": "assets/v4-blanket-opening.png",
         "action": "Pip turns and pushes a folded blanket across the floor; it slides into frame toward the human's sneakers and stops against them. Pip gives a small satisfied nod."
       }
     }
   ],
   "audio": {
     "vo": [
-      {"id": "v1", "who": "human", "text": "Pip, I have plans.", "file": "audio/vo/04-social-battery-inspection/v1.wav", "start": "c1.start+1.3", "est": 1.4,
-       "direction": "Tired but trying to be reasonable. Almost a sigh."},
-      {"id": "v2", "who": "pip", "text": "You were social yesterday.", "file": "audio/vo/04-social-battery-inspection/v2.wav", "start": "c2.start+0.15", "est": 1.6,
-       "direction": "Clipped, earnest, reading from the official record."},
-      {"id": "v3", "who": "human", "text": "I went to the grocery store.", "file": "audio/vo/04-social-battery-inspection/v3.wav", "start": "c3.start+0.2", "est": 1.9,
-       "direction": "Defensive, a little sheepish; this is their entire alibi."},
-      {"id": "v4", "who": "pip", "text": "And you made eye contact.", "file": "audio/vo/04-social-battery-inspection/v4.wav", "start": "c4.start+0.4", "est": 1.7,
-       "direction": "Grave. Announcing a verdict. Slight pause before 'eye contact'."}
+      {
+        "id": "v1",
+        "who": "human",
+        "text": "Pip, I have plans.",
+        "file": "audio/vo/04-social-battery-inspection/v1.wav",
+        "start": "c1.start+1.3",
+        "est": 1.4,
+        "direction": "Tired but trying to be reasonable. Almost a sigh."
+      },
+      {
+        "id": "v2",
+        "who": "pip",
+        "text": "You were social yesterday.",
+        "file": "audio/vo/04-social-battery-inspection/v2.wav",
+        "start": "c2.start+0.15",
+        "est": 1.6,
+        "direction": "Clipped, earnest, reading from the official record."
+      },
+      {
+        "id": "v3",
+        "who": "human",
+        "text": "I went to the grocery store.",
+        "file": "audio/vo/04-social-battery-inspection/v3.wav",
+        "start": "c3.start+0.2",
+        "est": 1.9,
+        "direction": "Defensive, a little sheepish; this is their entire alibi."
+      },
+      {
+        "id": "v4",
+        "who": "pip",
+        "text": "And you made eye contact.",
+        "file": "audio/vo/04-social-battery-inspection/v4.wav",
+        "start": "c4.start+0.4",
+        "est": 1.7,
+        "direction": "Grave. Announcing a verdict. Slight pause before 'eye contact'."
+      }
     ],
     "sfx": [
-      {"file": "door_handle_rattle", "start": "c1.start+0.2", "gain_db": -3},
-      {"file": "pencil_scratch", "start": "c4.start+0.1", "gain_db": -4},
-      {"file": "stamp_thud", "start": "v4.end+0.12", "gain_db": -1},
-      {"file": "blanket_drag", "start": "c5.start+0.3", "gain_db": -3}
+      {
+        "file": "door_handle_rattle",
+        "start": "c1.start+0.2",
+        "gain_db": -3
+      },
+      {
+        "file": "pencil_scratch",
+        "start": "c4.start+0.1",
+        "gain_db": -4
+      },
+      {
+        "file": "stamp_thud",
+        "start": "v4.end+0.12",
+        "gain_db": -1
+      },
+      {
+        "file": "blanket_drag",
+        "start": "c5.start+0.3",
+        "gain_db": -3
+      }
     ],
     "music": [],
-    "room_tone": {"gain_db": 3, "fade_in": 0.3}
+    "room_tone": {
+      "gain_db": 3,
+      "fade_in": 0.3
+    }
   },
   "overlays": [
-    {"id": "hook", "kind": "text", "style": "hook", "text": "Social battery inspection.", "start": 0.0, "end": "c1.end"},
-    {"id": "sign", "kind": "text", "style": "sign", "text": "CLOSED", "start": 0.0, "end": "c2.end", "pos": [540, 1010], "rot": -2, "anim": "none", "placeholder_position": true},
-    {"id": "stamp", "kind": "stamp", "text": "EYE CONTACT\nDETECTED", "start": "v4.end+0.12", "end": "end", "pos": [540, 560]}
+    {
+      "id": "hook",
+      "kind": "text",
+      "style": "hook",
+      "text": "Social battery inspection.",
+      "start": 0.0,
+      "end": "c1.end"
+    },
+    {
+      "id": "sign",
+      "kind": "text",
+      "style": "sign",
+      "text": "CLOSED",
+      "start": 0.0,
+      "end": "c2.end",
+      "pos": [
+        245,
+        1110
+      ],
+      "rot": -2,
+      "anim": "none",
+      "placeholder_position": true,
+      "scale": 0.54
+    },
+    {
+      "id": "stamp",
+      "kind": "stamp",
+      "text": "EYE CONTACT\nDETECTED",
+      "start": "v4.end+0.12",
+      "end": "end",
+      "pos": [
+        540,
+        560
+      ]
+    }
   ],
-  "cover": {"clip": "c1", "at": 1.0, "overlays": ["sign"]},
+  "cover": {
+    "clip": "c1",
+    "at": 1.0,
+    "overlays": [
+      "sign"
+    ]
+  },
   "qa": [
     "OPENING (0.0s): a tiny duck blocking the front door with a sign taller than he is; 'CLOSED' is readable on the sign and 'Social battery inspection.' frames the bit.",
     "PAYOFF: 'And you made eye contact.' -> stamp lands exactly on the stamp sound -> 'EYE CONTACT DETECTED' -> the blanket slides into the human's shoes. Reads without explanation.",

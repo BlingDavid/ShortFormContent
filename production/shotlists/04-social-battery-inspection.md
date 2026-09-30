@@ -1,6 +1,6 @@
 # Social Battery Inspection  (`04-social-battery-inspection`)
 
-- Status: **awaiting-generation**
+- Status: **rendered-procedural**
 - Planned length: **13.4 s** vertical 9:16 (provisional until real clip and voice lengths exist)
 - Final caption: *Pip counts grocery-store eye contact as an outing.*
 - Cover: bare frame from clip `c1`
@@ -57,10 +57,10 @@ Vertical 9:16 tactile 3D animated comedy in a cozy apartment entryway, locked-of
 
 | id | time | who | line | direction |
 |---|---|---|---|---|
-| v1 | 1.30-2.70 | human | Pip, I have plans. | Tired but trying to be reasonable. Almost a sigh. |
-| v2 | 3.15-4.75 | pip | You were social yesterday. | Clipped, earnest, reading from the official record. |
-| v3 | 5.20-7.10 | human | I went to the grocery store. | Defensive, a little sheepish; this is their entire alibi. |
-| v4 | 7.60-9.30 | pip | And you made eye contact. | Grave. Announcing a verdict. Slight pause before 'eye contact'. |
+| v1 | 1.30-3.26 | human | Pip, I have plans. | Tired but trying to be reasonable. Almost a sigh. |
+| v2 | 3.15-4.79 | pip | You were social yesterday. | Clipped, earnest, reading from the official record. |
+| v3 | 5.20-7.28 | human | I went to the grocery store. | Defensive, a little sheepish; this is their entire alibi. |
+| v4 | 7.60-9.22 | pip | And you made eye contact. | Grave. Announcing a verdict. Slight pause before 'eye contact'. |
 
 ## Overlays
 
@@ -68,7 +68,7 @@ Vertical 9:16 tactile 3D animated comedy in a cozy apartment entryway, locked-of
 |---|---|
 | 0.00-3.00 | text: Social battery inspection. |
 | 0.00-5.00 | text: CLOSED |
-| 9.42-13.40 | stamp: EYE CONTACT DETECTED |
+| 9.34-13.40 | stamp: EYE CONTACT DETECTED |
 
 Dialogue subtitles are burned in from the voice lines (turn off with `--no-subtitles`).
 
@@ -78,7 +78,7 @@ Dialogue subtitles are burned in from the voice lines (turn off with `--no-subti
 |---|---|
 | 0.20 | SFX `door_handle_rattle` -3 dB |
 | 7.30 | SFX `pencil_scratch` -4 dB |
-| 9.42 | SFX `stamp_thud` -1 dB |
+| 9.34 | SFX `stamp_thud` -1 dB |
 | 10.70 | SFX `blanket_drag` -3 dB |
 
 ## Review checklist (run on the finished file before calling it done)

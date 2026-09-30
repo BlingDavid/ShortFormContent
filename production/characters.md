@@ -6,7 +6,7 @@ The long-term aim is recurring characters, recurring jokes and one identifiable 
 
 **Design lock:** palm-sized cream dragon; round face; dark expressive eyes; exactly two short burnt-orange horns; tiny moss-green wings; small claws.
 **Personality:** solemn, self-assured, unexpectedly caring. Treats everyday comforts as guarded treasure.
-**Reference:** `assets/crumb-heating-fee-opening.png` (rust-orange couch, cushion dent). Use it as the character reference for videos 2 and 5, not only video 1.
+**Reference:** `assets/crumb-heating-fee-opening.png` (rust-orange couch, cushion dent). The 3D rig in `anim3d/crumb3d.py` is modelled on it and used in videos 1, 2 and 5.
 **Scale:** always palm-sized. A mug, a slipper and a phone should each look enormous next to him.
 **Voice:** small, dry, deadpan; sincere underneath. Never baby-talk. The comedy is that he means every word.
 **Sonic motif:** the small register *ding* is Crumb's "fee" sound and can recur across episodes.

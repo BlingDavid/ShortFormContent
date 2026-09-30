@@ -159,22 +159,6 @@
       "end": "c1.end"
     },
     {
-      "id": "sign",
-      "kind": "text",
-      "style": "sign",
-      "text": "CLOSED",
-      "start": 0.0,
-      "end": "c2.end",
-      "pos": [
-        245,
-        1110
-      ],
-      "rot": -2,
-      "anim": "none",
-      "placeholder_position": true,
-      "scale": 0.54
-    },
-    {
       "id": "stamp",
       "kind": "stamp",
       "text": "EYE CONTACT\nDETECTED",
@@ -188,10 +172,7 @@
   ],
   "cover": {
     "clip": "c1",
-    "at": 1.0,
-    "overlays": [
-      "sign"
-    ]
+    "at": 1.0
   },
   "qa": [
     "OPENING (0.0s): a tiny duck blocking the front door with a sign taller than he is; 'CLOSED' is readable on the sign and 'Social battery inspection.' frames the bit.",

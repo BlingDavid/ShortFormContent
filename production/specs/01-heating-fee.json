@@ -181,9 +181,8 @@
     }
   ],
   "cover": {
-    "image": "assets/crumb-heating-fee-opening.png",
     "clip": "c1",
-    "at": 0.3,
+    "at": 1.6,
     "text": "I WAS GONE 10 SECONDS",
     "y": 470,
     "avoid": [

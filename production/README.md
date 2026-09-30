@@ -1,8 +1,10 @@
 # Production: five Crumb & Pip shorts
 
-## Status: five videos rendered (code-animated, stand-in voices)
+## Status: five videos rendered in 3D (stand-in voices)
 
-All five shorts exist as finished 1080x1920 files in `out/<id>/` with covers, captions and QC reports. **How they were made matters:** no AI video generator was reachable from the cloud session, so the characters are animated in code (`anim/`): drawn frame by frame, keyed to the same timeline as the voice, SFX and overlays. That is real animation, but it is a stylised vector look, **not** the tactile 3D style of your reference image (which was not available here). Voices are robotic espeak-ng stand-ins. Nothing has been published.
+All five shorts are rendered as real 3D animation: modelled characters and sets, lit and path-traced with Blender Cycles (`anim3d/`), 720x1280 upscaled to 1080x1920 in the edit. Crumb is modelled after the supplied reference image (`assets/crumb-heating-fee-opening.png`): cream scaly skin, ridged rust horns, olive bat wings, glossy amber eyes, rust couch in late-afternoon light. Pip was designed from the text brief. Voices are robotic espeak-ng stand-ins. Nothing has been published.
+
+The earlier 2D vector versions (`anim/`) are superseded.
 
 | # | Video | Length | File |
 |---|---|---|---|
@@ -12,9 +14,16 @@ All five shorts exist as finished 1080x1920 files in `out/<id>/` with covers, ca
 | 4 | Social Battery Inspection | 13.4 s | `out/04-social-battery-inspection/04-social-battery-inspection.mp4` |
 | 5 | The Comfort Hoard | 13.0 s | `out/05-comfort-hoard/05-comfort-hoard.mp4` |
 
-Rebuild any video: `python production/tools/make_voices.py <id>` (voices), `python production/anim/render.py <id>` (clips into `raw/`, git-ignored), `python production/tools/finish.py production/specs/<id>.json` (edit, mix, cover, QC).
+Rebuild a video:
 
-Known limits: Crumb and Pip are designed from the text brief, so their look is provisional; the espeak voices are placeholders (drop recorded or TTS WAVs into `audio/vo/<id>/` and re-run `finish.py`); sound effects and music were checked by level and spectrogram, not by ear; Video 5's last line has its caption switched off to honour "no overlay on the final line".
+```bash
+pip install bpy==5.0.1 pillow numpy imageio-ffmpeg     # bpy needs Python 3.11
+python production/tools/make_voices.py <id>             # stand-in voices (espeak-ng)
+python production/anim3d/render3d.py <id>               # 3D clips into raw/ (git-ignored), ~8 s/frame on 4 CPU cores
+python production/tools/finish.py production/specs/<id>.json
+```
+
+Known limits: the 3D models are procedural (built in code, not sculpted by an artist), so they are simpler than the reference image; the human appears only as hands and, for the kiss, a soft-profile chin and lips; the espeak voices are placeholders (drop recorded or TTS WAVs into `audio/vo/<id>/` and re-run `finish.py`); sound was checked by level and spectrogram, not by ear.
 
 ## Upgrading to true AI-generated footage (optional)
 
